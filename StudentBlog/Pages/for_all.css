@@ -109,6 +109,12 @@ h2
     color: white;
     font-family: 'Oswald', sans-serif;
     font-size: 30px;
+    box-shadow:
+    2px 0px 5px black,
+    -2px 0px 5px black,
+    0px -2px 5px black,
+    0px 2px 5px black
+    ;
     text-align: center;
     text-decoration: none;
     padding: 0 2% 1% 2%;

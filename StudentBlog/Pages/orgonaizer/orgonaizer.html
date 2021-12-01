@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оргонайзер студента</title>
+    <link href="orgonaizer.css" rel="stylesheet">
+    <link href="../for_all.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="menu_bar">
+    </header>
+    <main>
+        <div class="orgonizer">
+            <h3>Оргонайзер</h3>
+            <p class="p_1"> Записывай свои дела, мысли, в этот удобный Оргонайзер на каждый день, где ты сможешь легко добавлять и удалять записи</p>
+            <p class="p_2">Для записи, напишите текст в поле ввода ниже, для удаления нажмите на красную кнопку</p>
+            <textarea type="text" id="new_work"></textarea><button onclick="add()">submit</button>
+            <li id="Works">
+
+            </li>
+        </div>
+    </main>
+    <footer id ="foot">
+    </footer>
+    <script>
+        let size = 0;
+        function showtime()
+        {
+            let time = new Date();
+            let Time = "";
+            if(time.getHours() < 10)
+                Time += "0"+time.getHours() + ":"
+            else
+                Time += time.getHours() + ":"
+            if(time.getMinutes()  < 10)
+                Time += "0" + time.getMinutes() + ":"
+            else
+                Time += time.getMinutes() + ":"
+            if(time.getSeconds() < 10)
+                Time += "0" + time.getSeconds() 
+            else
+                Time += time.getSeconds() 
+            return Time;
+        }
+        function showdate()
+        {
+            let time = new Date();
+            let date = ""
+            if(time.getDate() < 10)
+                date +="0" + time.getDate() + "/";
+            else
+                date +=time.getDate()  + "/";
+            if(time.getMonth() < 10)
+                date +="0" + (time.getMonth() + 1)  + "/";
+            else
+                date +=(time.getMonth() + 1)  + "/";
+            return date + time.getFullYear();
+        }
+        function add()
+        {
+            let new_work = document.querySelector('textarea').value;
+            if(new_work != "")
+            {
+                let lis = document.getElementById("Works");
+
+                let new_elem = document.createElement('ol');
+                new_elem.id = "obj" + size;
+                size+=1;
+                new_elem.classList.add("item");
+
+                let descp = document.createElement('p');
+                descp.innerHTML = new_work;
+
+                let timedate = document.createElement('div');
+                let date = document.createElement('b');
+                date.innerHTML = showdate();
+                let time = document.createElement('b');
+                time.innerHTML = showtime();
+                timedate.appendChild(time)
+                timedate.appendChild(date)
+
+                let conta = document.createElement('div');
+                let dest = document.createElement('button')
+                conta.classList.add("btn");
+                dest.addEventListener("click", destroy)
+                dest.id = new_elem.id
+                dest.innerHTML = "удалить";
+                conta.appendChild(dest);
+                
+                
+                new_elem.appendChild(descp);
+                new_elem.appendChild(timedate);
+                new_elem.appendChild(conta);
+                lis.appendChild(new_elem);
+            }
+        }
+        function destroy(ID)
+        {
+            let lis = document.getElementById("Works");
+            lis.removeChild(document.getElementById(ID.currentTarget.id));
+        }
+        showtime();
+    </script>
+    <script src="../for_all.js"></script>
+</body>
+</html>

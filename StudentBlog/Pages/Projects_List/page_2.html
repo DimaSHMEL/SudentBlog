@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTUIT LAB RAVE GAME</title>
+    <link href="page.css" rel="stylesheet">
+    <link href="../for_all.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <script src="like.js"></script>
+</head>
+<body>
+    <header id="menu_bar">
+
+    </header>
+    <main>
+        <h1>RTULab racing game</h1>
+        <div class="like_box">
+            <img onclick="change(this)" class="like" src="../../Content/like.png" alt="">
+            <p id="likes">0</p>
+        </div>
+        <div class="flexbx">
+            <img   src="../../Content/page_2_img_3.png">
+            <img    src="../../Content/page_2_img_4.png">
+        </div>
+        <p>
+        Идея проекта - создать гоночную игру с несколькими разными картами. Есть несколько типов уровней: полоса препятствий, прохождение контрольных точек, уровень релаксации, восхождение на гору.
+        Эта игра началась как проект для отбора в лабораторию МИРЭА в 2021 году. Моей задачей, как одного из главного по моделям,  в данному проекте было создание модели машины и некоторых препятствий. 
+        А моя задача, как программиста была в реализации управления и физики машины. Также некоторые пролёты камеры и механики, например: система чекпоинтов.
+        Также я разработал несколько верии с разным количеством деталей(травы, деревья).
+        </p>
+        <h1>Инструкции по запуску:</h1>
+        <ul class="listt" style="width: 100%; align-items: center;">
+            <li>Скачать DirectX (самая последняя версия)</li>
+            <li>    Загрузить распространяемый компонент Visual C ++</li>
+            <li>Перейдите по этой ссылке [https://disk.yandex.ru/d/_IKC48kZwMRfoQ] для облегченной версии и https://disk.yandex.ru/d/tq8SU52Aj0d_qQ для жесткой версии и загрузите архив</li>
+            <li>Разархивируйте это</li>
+            <li>Запустите RaceGame.exe</li>
+        </ul>
+        <h1>Управление игрой (клавиатура):</h1>
+        <div class="flexbx">
+            <ul class="listt">
+                <li>w - движение вперед</li>
+                <li>s - движение назад</li>
+                <li>а - повернуть налево</li>
+                <li>d - повернуть направо</li>
+                <li>r - перезапуск с контрольной точкой</li>
+                <li>esc - меню паузы</li>
+                <li>вкладка - изменить вид</li>
+                <li>пробел - ручной тормоз</li>
+            </ul>
+            <img width="40%" src="../../Content/page_2_img_1.png">
+        </div>
+        <h1>Управление игрой (геймпад):</h1>
+        <div class="flexbx">
+            <img style="float: left;" width="40%" src="../../Content/page_2_img_2.png">
+            <ul class="listt">
+                <li>RT (или левый джойстик) - движение вперед</li>
+                <li>LT (или Left Stick) - движение назад</li>
+                <li>Левый стик - поверните налево</li>
+                <li>Левый стик - поверните направо</li>
+                <li>X - перезапуск с контрольной точки</li>
+                <li>Выбрать - изменить вид</li>
+                <li>LB - ручной тормоз</li>
+            </ul>
+        </div>
+        <div class="flexbx">
+            <div class="recomend">
+                <h1>Рекомендуемые требования:</h1>
+                <ul class="listt" style="width: 100%;">
+                    <li>OC: Windows 10 64-битная</li>
+                    <li>Процессор: Ryzen 5 3600 и выше</li>
+                    <li>Видеокарта: Nvidia GTX 1070 и выше</li>
+                    <li>Оперативная память: 16 ГБ</li>
+                    <li>Место на диске: 3 Гб</li>
+                </ul>
+            </div>
+            <div class="recomend">
+                <h1>Минимальные требования:</h1>
+                <ul class="listt" style="width: 100%;">
+                    <li>OC: Windows 10 64-битная</li>
+                    <li>Процессор: четырехъядерный процессор с частотой 2,5 ГГц</li>
+                    <li>Видеокарта: NVIDIA GeForce 470 GTX или AMD Radeon 6870 HD и выше</li>
+                    <li>Оперативная память: 8 ГБ</li>
+                    <li> Место на диске: 2 ГБ</li>
+                </ul>
+            </div>
+        </div>
+        <h1>Ссылки</h1>
+        <div class="flexbx" style="justify-content: center; width: 100%; flex-direction: row;">
+            <a href="https://github.com/DimaSHMEL/RaceGame" style="align-items: center;"><img src="../../Content/gitHub.png"></a>
+        </div>
+    </main>
+    <footer id = "foot">
+    </footer>
+    <script src="../for_all.js"></script>
+    </body>
+    </html>

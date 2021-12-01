@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Вход</title>
+        <link href="registr.css" rel="stylesheet">
+        <link href="../for_all.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+        <style>
+            .login-form
+            {
+                margin: 12% 25% 12% 25%;
+            }
+        </style>
+    </head>
+<body>
+    <div>
+        <div class="login-form">
+            <form id ="forma" action="../Main_Info/main.html">
+                <h1>Регистрация</h1>
+
+                <label for="email">Почта</label>
+                <input id = "email" class="email" name="email" type="email" required
+                placeholder="Введите почту" oninvalid="not_valid(this)">
+
+                <label for="username">Логин</label>
+                <input id = "user" class="username" name="username" type="text" required
+                placeholder="Введите логин" oninvalid="not_valid(this)">
+                
+                <label for="name">Имя</label>
+                <input id = "name" class="name" name="name" type="text" 
+                placeholder="Введите имя" oninvalid="not_valid(this)">
+                <label for="surname">Фамилия</label>
+                <input id = "surname" class="surname" name="surname" type="text" 
+                placeholder="Введите фамилию" oninvalid="not_valid(this)">
+
+                <label for="pas">Пароль</label>
+                <input class="pass" id="pass" type="password" required
+                placeholder="Введите пароль">
+                <label for="pas">Подтвердите пароль</label>
+                <input class="pass" id="pass_re" type="password" required
+                placeholder="Введите пароль">
+                <label for="changevis">Показать пароль</label>
+
+                <input id ="changevis" class="changevisb" name = "changevis" type="checkbox" onclick="switch_pass()">
+                <div class="btn_1_3">
+                        <button type="submit">Регистрация</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    <script>
+        function not_valid(textbox)
+        {
+            textbox.setCustomValidity(" ");
+        }
+        function switch_pass()
+        {
+            let password = document.getElementById("pass");
+            let password_re = document.getElementById("pass_re");
+            if(password.type === "password")
+            {
+                password.type = "text";
+                password_re.type = "text";
+            }
+            else
+            {
+                password.type = "password"
+                password_re.type = "password";
+            }
+        }
+        function login()
+        {
+            let forma = document.getElementById("forma")
+            let password_re = document.getElementById("pass_re");
+            let password = document.getElementById("pass");
+            let changevis = document.getElementById("changevis");
+            forma.addEventListener('submit', e=>
+            {
+            if(password_re.value === password.value)
+            {
+                password.type = "password"
+                password_re.type = "password";
+                changevis.remove();
+            }
+            else
+            {
+                event.preventDefault()
+            }
+            })
+            
+        }
+        login();
+    </script>
+</body>
+</html>

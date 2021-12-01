@@ -1,0 +1,103 @@
+.imgleft
+{
+    float: left;
+    width: 45%;
+}
+.like
+{
+    margin: 0;
+    background-image: url("../../Content/like.png");
+    width: 50px;
+}
+.like_box
+{
+    margin: 0;
+    width: 10%;
+    width: fit-content;
+}
+
+.like_box>p
+{
+    display: inline;
+    font-size: 20px;
+    
+}
+.listt
+{
+    margin: 0;
+    display:inline-block; 
+    width: 40%;
+    height: fit-content;
+    word-wrap: break-word;
+    padding: 0;
+}
+.listt_r
+{
+    margin: 0;
+    display:inline-block; 
+    width: 40%;
+    text-align: right;
+    height: fit-content;
+    word-wrap: break-word;
+    padding: 0;
+}
+.listt>li, .listt_r>li
+{
+    font-size: 30px;
+    font-family: 'Oswald', sans-serif;
+    color:white;
+    list-style-type: none;
+}
+
+.recomend
+{
+    width: 45%;
+    height: 400px;
+    display: inline-block;
+
+}
+.flexbx
+{
+    display: flex;
+    justify-content: space-between;
+}
+.flexbx>img
+{
+    width: 50%;
+}
+@media only screen and (max-width: 1100px)
+{
+.imgleft
+{
+    float: none;
+    width: 100%;
+}
+.flexbx
+{
+    flex-direction: column;
+}
+.flexbx>img
+{
+    width: 100%;
+    
+}
+.listt
+{
+    width: 100%;
+    text-align: center;
+    padding: 0;
+}
+.listt_r
+{
+    width: 100%;
+    text-align: center;
+    padding: 0;
+}
+.recomend
+{
+    width: 100%;
+    height: 400px;
+    display: inline-block;
+
+}
+}

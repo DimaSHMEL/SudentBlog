@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Вход</title>
+        <link href="registr.css" rel="stylesheet">
+        <link href="../for_all.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+        
+    </head>
+<body>
+    <div>
+        <div class="login-form">
+            <form id ="forma" action="../Main_Info/main.html">
+                <h1>Вход</h1>
+                <label for="username">Логин</label>
+                <input id = "user" class="username" name="username" type="text" required
+                placeholder="Введите логин" oninvalid="not_valid(this)">
+                <label for="username">Пароль</label>
+                <input class="pass" id="pass" type="password" required
+                placeholder="Введите пароль">
+                <label for="changevis">Показать пароль</label>
+                <input id ="changevis" class="changevisb" name = "changevis" type="checkbox" onclick="switch_pass()">
+                <div class="btn_1_3">
+                        <button type="submit">Войти</button>
+                </div>
+                <a href="register.html">Зарегистрируйтесь</a>
+            </form>
+        </div>
+    </div>
+    <script>
+        function not_valid(textbox)
+        {
+            textbox.setCustomValidity(" ");
+        }
+        function switch_pass()
+        {
+            let password = document.getElementById("pass");
+            if(password.type === "password")
+            {
+                password.type = "text";
+            }
+            else
+            {
+                password.type = "password"
+            }
+        }
+        function login()
+        {
+            let forma = document.getElementById("forma")
+            let username = document.getElementById("user");
+            let password = document.getElementById("pass");
+            let changevis = document.getElementById("changevis");
+            forma.addEventListener('submit', e=>
+            {
+            if(username.value == "1" && password.value == "1")
+            {
+                password.type = "password"
+                changevis.remove();
+            }
+            else
+            {
+                event.preventDefault()
+            }
+            })
+            
+        }
+        login();
+    </script>
+</body>
+</html>

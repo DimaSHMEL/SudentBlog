@@ -1,0 +1,136 @@
+footer
+{
+    width: 100%;
+}
+.at
+{
+    border: 2px rgb(156, 14, 156) solid;
+}
+main
+{
+    padding: 0 1% 0 1%;
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+}
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-image: url("../Content/for_back.jpg");
+}
+body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+main
+{
+    height: fit-content;
+    background-image: url("../Content/for_back.jpg");
+}
+a
+{
+    color:white;
+    text-decoration: none;
+}   
+a:hover
+{
+    text-shadow:
+    1px 0px 1px purple,
+    0px 2px 1px purple;
+    transition: 250ms;
+}
+p
+{
+    font-size: 30px;
+    font-family: 'Oswald', sans-serif;
+    color:white;
+}
+h1
+{
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color:white;
+    
+}
+footer
+{
+    background-color: rgb(59, 59, 59);
+    padding-bottom: 10px;
+}
+h2
+{
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 0;
+    font-family: 'Oswald', sans-serif;
+    color:white;
+    
+}
+.image_logo
+{
+    height: 300px;
+    width: 100%;
+}
+.Menu_bar
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0;
+    background-color: black;
+    background-image: url("../Content/for_button.jpg");
+}
+.Menu
+{
+    display: none;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0;
+    background-color: black;
+    background-image: url("../Content/for_button.jpg");
+}
+.Menu>a
+{
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    padding: 0 2% 1% 2%;
+    background-image: url("../Content/for_button.jpg");
+}
+
+.Menu_bar>a
+{
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    padding: 0 2% 1% 2%;
+    background-image: url("../Content/for_button.jpg");
+}
+.warp
+    {
+        display: flex;
+    }
+@media only screen and (max-width: 1100px)
+{
+    .Menu
+    {
+        display: flex;
+    }
+    .warp
+    {
+        display: none;
+    }
+    .Menu_bar
+    {
+        flex-direction: column;
+    }
+    
+}

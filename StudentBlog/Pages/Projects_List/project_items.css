@@ -114,6 +114,10 @@ main
     transform: scale(100%);
     transition: 200ms;
 }
+.item>a>h1
+{
+    font-size: 30px;
+}
 .item>p
 {
     max-height: 60px;       /* fallback */
